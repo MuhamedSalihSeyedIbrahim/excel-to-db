@@ -1,5 +1,5 @@
 {
-    "filePath": "./assets/_100000sample.xlsx",
+    "filePath": "./assets/_1000sample.xlsx",
     "fileChunkLimit": 1000,
     "httpRequestLimitPerMs": {
         "defaultHttpRequestLimit": 1000,
