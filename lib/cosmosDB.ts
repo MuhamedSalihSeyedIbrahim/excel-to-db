@@ -5,6 +5,9 @@ import * as throttledQueue from 'throttled-queue';
 
 import { httpRequestLimitPerMs } from '../config/config.json';
 
+/**
+ * Cosmos query custom param type
+ */
 export interface Param {
     name: string;
     value: string | number | boolean;

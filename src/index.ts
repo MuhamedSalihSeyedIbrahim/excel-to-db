@@ -2,6 +2,9 @@ import { info, error } from '../lib/logger';
 
 import { app } from './app';
 
+/**
+ * Initial application call.
+ */
 const appStartTime = Date.now();
 console.time();
 info(`Application Excel to CosmosDB Started : ${Date.now() / (1000 * 60)}.`);
