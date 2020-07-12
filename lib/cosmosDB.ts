@@ -30,7 +30,7 @@ export class CosmosDB {
         const { defaultHttpRequestLimit, defaultPerMs, evenlySpacedRequest } = httpRequestLimitPerMs;
         info(
             `HTTP request throttle Queue values defaultRequestLimit(1000) : ${defaultHttpRequestLimit}, 
-             defaultPerMs(4000) : ${defaultPerMs}. (can be configured in config.js )`,
+             defaultPerMs(8000) : ${defaultPerMs}.[optimised for 25000 record and 8 min approx.]|[ can be configured in config.js]`,
         );
 
         this._throttle = throttledQueue(defaultHttpRequestLimit, defaultPerMs, evenlySpacedRequest);
