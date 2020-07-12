@@ -2,7 +2,7 @@
 
 ## Desciption:
 
-    An application capable of reading 1L Data and writing to the CosmosDB.
+    An application capable of reading 1L Data in max 15 min and writing to the CosmosDB.
 
 ## ScapFold Description:
 
