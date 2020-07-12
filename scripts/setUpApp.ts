@@ -18,7 +18,7 @@ function dirSetUp(path) {
 /**
  * To setup project - create db and setup empty db.
  */
-async function setUpPrj() {
+async function setUpApp() {
     Object.keys(paths).forEach((sourcePath) => {
         sourcePath.indexOf('Dir') !== -1 ? dirSetUp(paths[sourcePath]) : dirSetUp(path.dirname(paths[sourcePath]));
     });
@@ -33,4 +33,4 @@ async function setUpPrj() {
 /**
  * Initial call.
  */
-setUpPrj().catch((err) => error(err.message));
+setUpApp().catch((err) => error(err.message));

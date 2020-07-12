@@ -18,7 +18,7 @@ function dirCleanUp(path) {
 /**
  * To clean project - delete db and setup empty db , directory with is not core of project after function is done.
  */
-async function cleanPrj() {
+async function cleanApp() {
     Object.keys(paths).forEach((sourcePath) => {
         sourcePath.indexOf('Dir') !== -1 ? dirCleanUp(paths[sourcePath]) : dirCleanUp(path.dirname(paths[sourcePath]));
     });
@@ -36,4 +36,4 @@ async function cleanPrj() {
 /**
  * Initial call.
  */
-cleanPrj().catch((err) => error(err.message));
+cleanApp().catch((err) => error(err.message));

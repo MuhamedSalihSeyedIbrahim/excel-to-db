@@ -5,8 +5,8 @@
   "main": "./dist/src/index.js",
   "scripts": {
     "start": "tsc && node --max_old_space_size=8192 ./dist/src/index.js",
-    "setup": "ts-node ./scripts/setUpPrj.ts",
-    "clean": "ts-node ./scripts/cleanPrj.ts",
+    "setup": "ts-node ./scripts/setUpApp.ts",
+    "clean": "ts-node ./scripts/cleanApp.ts",
     "status": "cls && ts-node ./reports/status.ts"
   },
   "keywords": [],
