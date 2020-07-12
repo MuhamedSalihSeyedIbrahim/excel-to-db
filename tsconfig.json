@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["es6"],
+        "module": "commonjs",
+        "outDir": "./dist",
+        "rootDir": ".",
+        "sourceMap": true,
+        "strict": false,
+        "resolveJsonModule": true,
+        "downlevelIteration": true,
+        "allowJs": true
+    },
+    "include": ["./"],
+    "exclude": ["node_modules", "**/*.spec.ts", "dist", ".prettierrc.js", ".eslintrc.js", ".gitignore", "LICENSE"]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "exceltodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/src/index.js",
+  "scripts": {
+    "start": "tsc && node --max_old_space_size=8192 ./dist/src/index.js",
+    "setup": "ts-node ./scripts/setUpPrj.ts",
+    "clean": "ts-node ./scripts/cleanPrj.ts",
+    "status": "cls && ts-node ./reports/status.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.0.22",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^3.7.4",
+    "moment": "^2.27.0",
+    "throttled-queue": "^1.0.7",
+    "underscore": "^1.10.2",
+    "winston": "^3.3.3",
+    "xlsx": "^0.16.3"
+  }
+}

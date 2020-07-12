@@ -1,0 +1,5 @@
+{
+    "reportStatus": "./reports/status.ts",
+    "log": "./logs/app.log",
+    "distDir": "./dist"
+}
