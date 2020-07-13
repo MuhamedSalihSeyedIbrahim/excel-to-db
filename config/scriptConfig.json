@@ -1,5 +1,6 @@
 {
     "reportStatus": "./reports/status.ts",
     "log": "./logs/app.log",
-    "distDir": "./dist"
+    "distDir": "./dist",
+    "outputFilePath": "./out/out.json"
 }

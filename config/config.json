@@ -1,9 +1,12 @@
 {
-    "filePath": "./assets/_1000sample.xlsx",
+    "filePath": "./assets/_10sample.xlsx",
     "fileChunkLimit": 1000,
     "httpRequestLimitPerMs": {
         "defaultHttpRequestLimit": 1000,
         "defaultPerMs": 8000,
         "evenlySpacedRequest": true
-    }
+    },
+    "writeTofile": false,
+    "outputFilePath": "./out/out.json",
+    "InsertInDb": true
 }

@@ -1,6 +1,9 @@
 import { AppModel } from './model';
 
 import * as XLSX from 'xlsx';
+import * as fs from 'fs';
+
+import { info } from '../lib/logger';
 
 /**
  * Application Service.
@@ -29,6 +32,15 @@ class AppService {
                 ?.map((row) => schema(row));
 
         return schemaMappedexcelRows;
+    }
+
+    /**
+     * Service to write the parsed JSON to file
+     */
+    writeToFile(records: Array<any>, outputFilePath: string) {
+        info(`Writing to file: ${outputFilePath}...`);
+        fs.writeFileSync(outputFilePath, JSON.stringify(records, null));
+        info(`Writing to file: ${outputFilePath} completed`);
     }
 
     /**

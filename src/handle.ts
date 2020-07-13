@@ -2,7 +2,7 @@ import { AppService } from './service';
 import * as _ from 'underscore';
 import * as fs from 'fs';
 
-import { filePath, fileChunkLimit } from '../config/config.json';
+import { filePath, fileChunkLimit, outputFilePath } from '../config/config.json';
 import { schema } from './schema/schema';
 
 /**
@@ -38,6 +38,15 @@ class AppController {
             info( '<-------------------------------INSERT DATA STATUS -[{ID ,STATUSCODE }]-------------------------------------->');
             info( JSON.stringify(${JSON.stringify(completeStatus, null, 4)}, null, 4));`,
         );
+    }
+
+    async excelToFile() {
+        //Service call.
+        const appService: AppService = new AppService(),
+            parsedExcelData: Array<any> = await appService.parseExcel(filePath, schema);
+
+        if (!outputFilePath) throw new Error(`Kindly provide output file path.`);
+        appService.writeToFile(parsedExcelData, outputFilePath);
     }
 }
 export { AppController };
